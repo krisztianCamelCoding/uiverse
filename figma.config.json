@@ -1,5 +1,12 @@
 {
   "codeConnect": {
-    "include": ["src/uiverse/**/*.{tsx,jsx}"]
+    "parser": "react",
+    "include": ["src/uiverse/**/*.{tsx,jsx}"],
+    "importPaths": {
+      "src/uiverse/*": "uiverse"
+    },
+    "paths": {
+      "uiverse": ["src/uiverse/*"]
+    }
   }
 }
