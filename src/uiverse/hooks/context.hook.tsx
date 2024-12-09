@@ -1,6 +1,4 @@
 import { useContext } from "react";
-import { ThemeContext, ThemeContextType } from "../contexts/theme.context";
+import { UiverseContext, UiverseContextType } from "../contexts/uiverse.context";
 
-export const useThemeContext = (): ThemeContextType => {
-  return useContext(ThemeContext);
-};
+export const useUiverseContext = (): UiverseContextType => useContext(UiverseContext);

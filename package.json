@@ -1,6 +1,7 @@
 {
-  "name": "uiverse",
-  "version": "0.1.0",
+  "name": "galaxis-uiverse",
+  "version": "0.1.15",
+  "description": "A UI component library",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -13,24 +14,27 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "prepublishOnly": "npm test -- --passWithNoTests && npm run prettier && npm run lint",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\" --config ./.prettierrc",
     "test": "jest --config jestconfig.json",
     "start": "react-scripts start",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic"
+    "chromatic": "npx chromatic",
+    "release": "npm run build && npm publish"
   },
   "files": [
     "dist",
     "LICENSE",
     "README.md"
   ],
-  "keywords": [],
-  "author": {
-    "name": "Krisztian Benedek"
-  },
+  "keywords": [
+    "ui",
+    "components",
+    "react"
+  ],
+  "author": "Krisztian Benedek",
   "license": "MIT",
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.2",

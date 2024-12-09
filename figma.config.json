@@ -3,7 +3,7 @@
     "parser": "react",
     "include": ["src/uiverse/**/*.{tsx,jsx}"],
     "importPaths": {
-      "src/uiverse/*": "uiverse"
+      "src/uiverse/*": "galaxis-uiverse"
     },
     "paths": {
       "uiverse": ["src/uiverse/*"]

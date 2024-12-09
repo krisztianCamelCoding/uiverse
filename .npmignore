@@ -1,0 +1,18 @@
+# Ignore test files
+src/tests
+*.test.*
+*.spec.*
+
+# Ignore storybook files
+src/stories
+*.stories.*
+
+# Ignore other unnecessary files
+node_modules
+dist
+public
+storybook-static
+*.log
+
+# Ignore specific files
+index.tsx

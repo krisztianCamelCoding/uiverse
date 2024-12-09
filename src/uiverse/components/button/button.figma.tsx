@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./button.component";
+import { Button } from "./button.component";
 import figma from "@figma/code-connect";
 
 figma.connect(
