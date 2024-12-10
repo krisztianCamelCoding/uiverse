@@ -2,8 +2,8 @@ import React, { createContext, Dispatch, FC, ReactNode, SetStateAction, useState
 import { Theme } from "@mui/material";
 import { getActiveTheme } from "../utils/theme.util";
 import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
 import { UiverseConfigModel } from "../models/uiverse-config.model";
+import CssBaseline from "@mui/material/CssBaseline";
 
 export interface UiverseContextType {
   theme: Theme;
@@ -23,8 +23,15 @@ type Props = UiverseConfigModel & {
   children?: ReactNode;
 };
 
-const UiverseProvider: FC<Props> = ({ uiverseTheme, children }) => {
-  const [activeTheme, setActiveTheme] = useState<Theme>(getActiveTheme(uiverseTheme ?? "dark"));
+/**
+ * The UiverseProvider component provides the Uiverse context to its children.
+ * It initializes the theme based on the provided configuration.
+ *
+ * @param {Props} props - The props for the UiverseProvider component.
+ * @returns {JSX.Element} The UiverseProvider component.
+ */
+export const UiverseProvider: FC<Props> = ({ theme, children }: Props): JSX.Element => {
+  const [activeTheme, setActiveTheme] = useState<Theme>(getActiveTheme(theme ?? "dark"));
 
   const uiverseContextValue: UiverseContextType = {
     theme: activeTheme,
@@ -41,5 +48,3 @@ const UiverseProvider: FC<Props> = ({ uiverseTheme, children }) => {
     </UiverseContext.Provider>
   );
 };
-
-export default UiverseProvider;
