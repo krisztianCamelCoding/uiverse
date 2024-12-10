@@ -1,0 +1,11 @@
+{
+  "include": ["scripts/release.ts"],
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["esnext"],
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  }
+}
