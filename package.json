@@ -1,34 +1,29 @@
 {
   "name": "galaxis-uiverse",
-  "version": "0.1.17",
+  "version": "0.1.0",
   "description": "A UI component library",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ethercards/uiverse.git"
-  },
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:release",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:release": "tsc --project tsconfig.release.json",
     "prepare": "npm run build",
+    "release": "npm run build && node dist/release.js && npm publish",
+    "chromatic": "npx chromatic",
+    "start": "react-scripts start",
+    "storybook": "storybook dev -p 6006",
     "prepublishOnly": "npm test -- --passWithNoTests && npm run prettier && npm run lint",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,md}\" --config ./.prettierrc",
     "test": "jest --config jestconfig.json",
-    "start": "react-scripts start",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "chromatic": "npx chromatic",
-    "build:release": "tsc --project tsconfig.release.json",
-    "release": "npm run build:release && node dist/release.js && npm publish"
+    "build-storybook": "storybook build"
   },
   "files": [
     "dist",
-    "LICENSE",
-    "README.md"
+    "LICENSE"
   ],
   "keywords": [
     "ui",

@@ -27,12 +27,12 @@ let content: any;
 
 function readPackage() {
   try {
-    console.info("[uiverse] reading package.json");
+    console.info("[Uiverse] reading package.json");
     buffer = fs.readFileSync(packageAbsolute);
     content = JSON.parse(buffer as any);
-    console.info(`[uiverse] Current version of the package: ${content.version}`);
+    console.info(`[Uiverse] Current version of the package: ${content.version}`);
   } catch (err) {
-    console.error("[uiverse] Failed to read package.json");
+    console.error("[Uiverse] Failed to read package.json");
   }
 }
 
@@ -43,15 +43,15 @@ function executeVersionChange(versionChange: VersionChange, version?: string): v
       switch (versionChange) {
         case VersionChange.SubVersion:
           vsep[vsep.length - 1]++;
-          console.info(`[uiverse] Sub version increased by 1 ~ ${vsep.join(".")}`);
+          console.info(`[Uiverse] Sub version increased by 1 ~ ${vsep.join(".")}`);
           break;
         case VersionChange.MainVersion:
           vsep[vsep.length - 2]++;
-          console.log(`[uiverse] Main version increased by 1 ~ ${vsep.join(".")}`);
+          console.log(`[Uiverse] Main version increased by 1 ~ ${vsep.join(".")}`);
           break;
         case VersionChange.CoreVersion:
           vsep[vsep.length - 3]++;
-          console.info(`[uiverse] Core version increased by 1 ~ ${vsep.join(".")}`);
+          console.info(`[Uiverse] Core version increased by 1 ~ ${vsep.join(".")}`);
           break;
         case VersionChange.Custom:
           vsep = (version as any).split(".") as number[];
@@ -61,7 +61,7 @@ function executeVersionChange(versionChange: VersionChange, version?: string): v
       fs.writeFileSync(packageAbsolute, JSON.stringify(content, null, 2));
     }
   } catch (err) {
-    console.error("[uiverse] Failed to update package: ", err);
+    console.error("[Uiverse] Failed to update package: ", err);
   }
 }
 
