@@ -1,9 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../uiverse/components";
+import Preview from "./preview";
 
 const meta: Meta = {
   title: "uiverse/Button",
   component: Button,
+  decorators: Preview.decorators,
   parameters: {
     layout: "centered",
     design: {
