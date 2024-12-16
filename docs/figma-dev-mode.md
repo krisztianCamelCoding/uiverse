@@ -1,6 +1,26 @@
 # Figma Dev Mode: A Quick Guide
 
-The Figma Dev Mode is a powerful feature designed to enhance the workflow between designers and developers. Follow these steps to enable and utilize it effectively:
+The Figma Dev Mode is a powerful feature designed to enhance the workflow between designers and developers. Follow these steps to enable and utilize it effectively.
+
+## Table of Contents
+
+- [Figma Dev Mode: A Quick Guide](#figma-dev-mode-a-quick-guide)
+  - [Table of Contents](#table-of-contents)
+  - [1. Open the Figma File](#1-open-the-figma-file)
+  - [2. Locate the Toolbar](#2-locate-the-toolbar)
+  - [3. Enable Dev Mode](#3-enable-dev-mode)
+  - [4. Access the Inspect Menu](#4-access-the-inspect-menu)
+    - [Try Out Components in the Playground](#try-out-components-in-the-playground)
+    - [Dynamic Properties and Code Connect](#dynamic-properties-and-code-connect)
+    - [Published Code in the Inspect Menu](#published-code-in-the-inspect-menu)
+  - [5. Leverage Plugins for Enhanced Functionality](#5-leverage-plugins-for-enhanced-functionality)
+    - [Viewing Stories in Storybook](#viewing-stories-in-storybook)
+  - [6. Add Measurements and Annotate Designs](#6-add-measurements-and-annotate-designs)
+    - [Adding Measurements](#adding-measurements)
+    - [Annotating Designs](#annotating-designs)
+  - [7. Inspect Properties in Dev Mode](#7-inspect-properties-in-dev-mode)
+    - [Viewing Properties](#viewing-properties)
+  - [References](#references)
 
 ## 1. Open the Figma File
 
@@ -55,6 +75,46 @@ In addition to the Inspect Menu, various plugins can be utilized to extend funct
 Opening Storybook enables you to see the pre-written stories for each component. These stories showcase different states and variations of the component, which you can interactively test. This hands-on approach helps in validating the behavior and appearance of components within their intended context.
 
 ![Storybook in Figma](assets/dev-mode/storybook-figma.png)
+
+## 6. Add Measurements and Annotate Designs
+
+Dev Mode also allows you to add measurements and annotations to your designs. This feature is useful for providing detailed specifications and notes directly within the design file.
+
+### Adding Measurements
+
+To add measurements, select the component or layer you want to measure. Then, click on the measurement tool in the toolbar. You can measure distances between elements, as well as the dimensions of individual components.
+
+![Measurements](assets/dev-mode/measurements.png)
+
+### Annotating Designs
+
+Annotations can be added to provide additional context or instructions. Select the annotation tool from the toolbar and click on the area of the design where you want to add a note. You can customize the annotation text and style to suit your needs.
+
+![Annotations](assets/dev-mode/annotations.png)
+
+For more detailed instructions, refer to the [Figma Help Center](https://help.figma.com/hc/en-us/articles/20774752502935-Add-measurements-and-annotate-designs-in-Dev-Mode).
+
+## 7. Inspect Properties in Dev Mode
+
+Inspecting properties in Dev Mode allows you to view detailed information about the components and layers in your design. This feature is essential for developers who need to understand the specifics of a design for implementation.
+
+### Viewing Properties
+
+To inspect properties, follow these steps:
+
+1. **Enable Dev Mode**: Ensure that Dev Mode is enabled in your Figma interface.
+2. **Select an Object**: Click on the component or layer you want to inspect.
+3. **Open the Inspect Menu**: Navigate to the right side of the interface to find the Inspect Menu.
+
+In the Inspect Menu, you will see various properties of the selected object, including:
+
+- **Dimensions**: Width and height of the object.
+- **Position**: X and Y coordinates on the canvas.
+- **Spacing**: Margins and padding.
+- **Styles**: Colors, fonts, and effects.
+- **CSS Code**: Automatically generated CSS code for the selected object.
+
+For more detailed instructions, refer to the [Figma Help Center](https://help.figma.com/hc/en-us/articles/22012921621015-Guide-to-inspecting).
 
 ## References
 
